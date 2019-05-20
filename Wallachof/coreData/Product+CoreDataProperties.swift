@@ -17,11 +17,11 @@ extension Product {
         return NSFetchRequest<Product>(entityName: "Product")
     }
 
+    @NSManaged public var desc: String?
     @NSManaged public var name: String?
-    @NSManaged public var price: Float
+    @NSManaged public var price: Double
     @NSManaged public var publishDate: NSDate?
     @NSManaged public var sold: Bool
     @NSManaged public var thumb: NSData?
-    @NSManaged public var desc: String?
 
 }
