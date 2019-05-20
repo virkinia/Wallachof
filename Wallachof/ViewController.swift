@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -35,5 +36,26 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction func fechtRequestPressed(_ sender: Any) {
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        debugPrint("Dino")
+        let persistentContainer = appDelegate.persistentContainer
+        let context = persistentContainer.viewContext
+        let productosRequest: NSFetchRequest<Product> = Product.fetchRequest()
+
+       do {
+        let productos = try context.fetch(productosRequest)
+        for producto in productos {
+            debugPrint(" Producto: \(producto.name!), descripción: \(producto.desc!) con un precio de \(producto.price)")
+        }
+
+        }
+       catch {
+        debugPrint("Ha fallado")
+        }
+    }
 }
 

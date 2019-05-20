@@ -18,28 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-M7-nRd">
-                                <rect key="frame" x="177" y="433" width="60" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-nP-I40">
+                                <rect key="frame" x="142" y="414" width="130" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-M7-nRd">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
+                                        <state key="normal" title="Crear 🦖"/>
+                                        <connections>
+                                            <action selector="btnTestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5TR-yb-INa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-ZF-cYq">
+                                        <rect key="frame" x="0.0" y="38" width="130" height="30"/>
+                                        <state key="normal" title="Fetch Request"/>
+                                        <connections>
+                                            <action selector="btnTestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nak-G4-hry"/>
+                                            <action selector="fechtRequestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAl-oM-bqV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JZb-b7-FBU"/>
-                                    <constraint firstAttribute="width" constant="60" id="X4V-q6-gHD"/>
+                                    <constraint firstAttribute="width" constant="130" id="RgL-93-AV7"/>
                                 </constraints>
-                                <state key="normal" title="Test"/>
-                                <connections>
-                                    <action selector="btnTestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5TR-yb-INa"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fi3-M7-nRd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cRw-ts-Qy7"/>
-                            <constraint firstItem="fi3-M7-nRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="etJ-dL-QNe"/>
+                            <constraint firstItem="8dL-nP-I40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSN-7R-epK"/>
+                            <constraint firstItem="8dL-nP-I40" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p8M-b4-Opt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="26" y="-69"/>
         </scene>
     </scenes>
 </document>
