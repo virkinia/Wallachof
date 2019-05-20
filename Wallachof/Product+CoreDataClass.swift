@@ -13,4 +13,16 @@ import CoreData
 @objc(Product)
 public class Product: NSManagedObject {
 
+    static var all: [Product] {
+        let productosRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+
+        do {
+            return try context.fetch(productosRequest)
+        }catch {
+            return []
+        }
+
+    }
+
 }

@@ -18,12 +18,9 @@ class ViewController: UIViewController {
 
     @IBAction func btnTestPressed(_ sender: Any) {
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
 
         debugPrint("Dino")
-        let persistentContainer = appDelegate.persistentContainer
+        let persistentContainer =   CoreDataManager.shared.persistentContainer
         let context = persistentContainer.viewContext
 
         let dinoDetector = Product(context: context)
@@ -31,30 +28,16 @@ class ViewController: UIViewController {
         dinoDetector.desc = "Último modelo, la tecnología más puntera"
         dinoDetector.price = 2000.0
 
-        appDelegate.saveContext()
+        CoreDataManager.shared.saveContext()
 
 
     }
 
     @IBAction func fechtRequestPressed(_ sender: Any) {
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        debugPrint("Dino")
-        let persistentContainer = appDelegate.persistentContainer
-        let context = persistentContainer.viewContext
-        let productosRequest: NSFetchRequest<Product> = Product.fetchRequest()
 
-       do {
-        let productos = try context.fetch(productosRequest)
-        for producto in productos {
+        for producto in Product.all {
             debugPrint(" Producto: \(producto.name!), descripción: \(producto.desc!) con un precio de \(producto.price)")
-        }
-
-        }
-       catch {
-        debugPrint("Ha fallado")
         }
     }
 }
