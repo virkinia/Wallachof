@@ -13,6 +13,8 @@
 		D9021C7B2292F8AA00E772F0 /* Wallachof.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9021C792292F8AA00E772F0 /* Wallachof.xcdatamodeld */; };
 		D9021C7D2292F8AB00E772F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7C2292F8AB00E772F0 /* Assets.xcassets */; };
 		D9021C802292F8AB00E772F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7E2292F8AB00E772F0 /* LaunchScreen.storyboard */; };
+		D9021C892293015100E772F0 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9021C872293015100E772F0 /* Product+CoreDataClass.swift */; };
+		D9021C8A2293015100E772F0 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9021C882293015100E772F0 /* Product+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D9021C7C2292F8AB00E772F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9021C7F2292F8AB00E772F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9021C812292F8AB00E772F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9021C872293015100E772F0 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D9021C882293015100E772F0 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		D9021C712292F8AA00E772F0 /* Wallachof */ = {
 			isa = PBXGroup;
 			children = (
+				D9021C8B2293023800E772F0 /* coreData */,
 				D9021C722292F8AA00E772F0 /* AppDelegate.swift */,
 				D9021C742292F8AA00E772F0 /* ViewController.swift */,
 				D9021C762292F8AA00E772F0 /* Main.storyboard */,
@@ -65,6 +70,15 @@
 				D9021C792292F8AA00E772F0 /* Wallachof.xcdatamodeld */,
 			);
 			path = Wallachof;
+			sourceTree = "<group>";
+		};
+		D9021C8B2293023800E772F0 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				D9021C872293015100E772F0 /* Product+CoreDataClass.swift */,
+				D9021C882293015100E772F0 /* Product+CoreDataProperties.swift */,
+			);
+			path = coreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9021C8A2293015100E772F0 /* Product+CoreDataProperties.swift in Sources */,
 				D9021C752292F8AA00E772F0 /* ViewController.swift in Sources */,
 				D9021C732292F8AA00E772F0 /* AppDelegate.swift in Sources */,
 				D9021C7B2292F8AA00E772F0 /* Wallachof.xcdatamodeld in Sources */,
+				D9021C892293015100E772F0 /* Product+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
