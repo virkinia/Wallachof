@@ -29,13 +29,9 @@ class ViewController: UIViewController {
         dinoDetector.price = 2000.0
 
         CoreDataManager.shared.saveContext()
-
-
     }
 
     @IBAction func fechtRequestPressed(_ sender: Any) {
-
-
         for producto in Product.all {
             debugPrint(" Producto: \(producto.name!), descripción: \(producto.desc!) con un precio de \(producto.price)")
         }

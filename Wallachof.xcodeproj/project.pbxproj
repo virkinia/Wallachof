@@ -13,6 +13,7 @@
 		D9021C7B2292F8AA00E772F0 /* Wallachof.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9021C792292F8AA00E772F0 /* Wallachof.xcdatamodeld */; };
 		D9021C7D2292F8AB00E772F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7C2292F8AB00E772F0 /* Assets.xcassets */; };
 		D9021C802292F8AB00E772F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7E2292F8AB00E772F0 /* LaunchScreen.storyboard */; };
+		D93CBCD22294426900C9D3D0 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CBCD12294426900C9D3D0 /* AddProductViewController.swift */; };
 		D9ECF55F229306F1002397EB /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECF55D229306F1002397EB /* Product+CoreDataClass.swift */; };
 		D9ECF560229306F1002397EB /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECF55E229306F1002397EB /* Product+CoreDataProperties.swift */; };
 		D9ECF587229329C9002397EB /* CoreManagerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECF586229329C9002397EB /* CoreManagerData.swift */; };
@@ -27,6 +28,7 @@
 		D9021C7C2292F8AB00E772F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9021C7F2292F8AB00E772F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9021C812292F8AB00E772F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93CBCD12294426900C9D3D0 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		D9ECF55D229306F1002397EB /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "../Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D9ECF55E229306F1002397EB /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D9ECF586229329C9002397EB /* CoreManagerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManagerData.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				D9021C722292F8AA00E772F0 /* AppDelegate.swift */,
 				D9021C742292F8AA00E772F0 /* ViewController.swift */,
 				D9021C762292F8AA00E772F0 /* Main.storyboard */,
+				D93CBCD12294426900C9D3D0 /* AddProductViewController.swift */,
 				D9ECF586229329C9002397EB /* CoreManagerData.swift */,
 				D9021C7C2292F8AB00E772F0 /* Assets.xcassets */,
 				D9021C7E2292F8AB00E772F0 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9ECF560229306F1002397EB /* Product+CoreDataProperties.swift in Sources */,
+				D93CBCD22294426900C9D3D0 /* AddProductViewController.swift in Sources */,
 				D9021C752292F8AA00E772F0 /* ViewController.swift in Sources */,
 				D9ECF587229329C9002397EB /* CoreManagerData.swift in Sources */,
 				D9021C732292F8AA00E772F0 /* AppDelegate.swift in Sources */,
