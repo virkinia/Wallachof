@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-69"/>
+            <point key="canvasLocation" x="287" y="-70"/>
         </scene>
         <!--Add Product View Controller-->
         <scene sceneID="fDG-MB-gvH">
@@ -70,11 +70,20 @@
                                     <constraint firstAttribute="width" constant="300" id="YMP-NV-wIE"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-sh-Ng1">
+                                <rect key="frame" x="319" y="832" width="30" height="30"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hHK-n4-ois"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Vje-sh-Ng1" firstAttribute="bottom" secondItem="NpJ-Ww-0Gq" secondAttribute="bottom" id="02C-QC-Lhh"/>
                             <constraint firstItem="tVu-nu-TRt" firstAttribute="top" secondItem="NpJ-Ww-0Gq" secondAttribute="top" constant="40" id="KiU-V8-LO6"/>
+                            <constraint firstItem="NpJ-Ww-0Gq" firstAttribute="trailing" secondItem="Vje-sh-Ng1" secondAttribute="trailing" constant="65" id="Wjh-CI-r1Y"/>
                             <constraint firstItem="tVu-nu-TRt" firstAttribute="centerX" secondItem="vHv-fq-tNW" secondAttribute="centerX" id="zE6-VW-HOy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NpJ-Ww-0Gq"/>
@@ -93,7 +102,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="849" y="-70"/>
+            <point key="canvasLocation" x="-507" y="-70"/>
         </scene>
     </scenes>
 </document>

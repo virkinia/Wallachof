@@ -80,7 +80,6 @@ extension AddProductViewController:UINavigationControllerDelegate {}
 extension AddProductViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
         // 1. cerrar el picker controller
             picker.dismiss(animated: true)
         // 2. Coger la imagen (info es un diccionario con claves enumeradas del tipo UIImagePickerController.InfoKey)
@@ -90,6 +89,25 @@ extension AddProductViewController: UIImagePickerControllerDelegate {
         }
 
         imgProduct.image = selectedImage
+
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        let flores = Product(context: context)
+        flores.name = "Florecillas de la pradera"
+        flores.desc = "Mogollón de alergia"
+        flores.price = 15.0
+
+        if let dataPng = selectedImage.pngData() {
+            //dataPng de tipo Data
+            flores.thumb = NSData(data: dataPng)
+        }
+
+        if let dataJpg = selectedImage.jpegData(compressionQuality: 0.8) {
+            //dataJPG de tipo Data
+            flores.thumb = NSData(data: dataJpg)
+        }
+
+        CoreDataManager.shared.saveContext()
+
 
     }
 
