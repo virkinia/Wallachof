@@ -96,12 +96,13 @@ extension AddProductViewController: UIImagePickerControllerDelegate {
         flores.desc = "Mogollón de alergia"
         flores.price = 15.0
 
-        if let dataPng = selectedImage.pngData() {
+     /*   if let dataPng = selectedImage.pngData() {
             //dataPng de tipo Data
             flores.thumb = NSData(data: dataPng)
-        }
+        }*/
 
-        if let dataJpg = selectedImage.jpegData(compressionQuality: 0.8) {
+        let thumbImage = selectedImage.resizeImage(targetSize: CGSize(width: 100, height: 100))
+        if let dataJpg = thumbImage.jpegData(compressionQuality: 0.8) {
             //dataJPG de tipo Data
             flores.thumb = NSData(data: dataJpg)
         }

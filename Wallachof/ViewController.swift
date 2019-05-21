@@ -12,11 +12,19 @@ import CoreData
 class ViewController: UIViewController {
 
   
+    @IBOutlet weak var imgLoad: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func btnLoadPressed(_ sender: Any) {
+        for producto in Product.all where producto.thumb != nil {
+            if let dataJpeg = producto.thumb {
+                imgLoad.image = UIImage(data: Data(referencing: dataJpeg))
+            }
+        }
+    }
     @IBAction func btnTestPressed(_ sender: Any) {
 
 

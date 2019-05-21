@@ -18,8 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-nP-I40">
-                                <rect key="frame" x="142" y="414" width="130" height="68"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-wF-15t">
+                                <rect key="frame" x="57" y="85" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="n3s-hN-36g"/>
+                                    <constraint firstAttribute="width" secondItem="hRR-wF-15t" secondAttribute="height" multiplier="1:1" id="qSI-3C-9gB"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-nP-I40">
+                                <rect key="frame" x="142" y="487" width="130" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-M7-nRd">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
@@ -36,6 +44,15 @@
                                             <action selector="fechtRequestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAl-oM-bqV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-U9-aon" userLabel="Load Photo">
+                                        <rect key="frame" x="0.0" y="76" width="130" height="30"/>
+                                        <state key="normal" title="Load Foto"/>
+                                        <connections>
+                                            <action selector="btnLoadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKZ-6W-eQs"/>
+                                            <action selector="btnTestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DO2-NM-3Oi"/>
+                                            <action selector="fechtRequestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ok0-l1-bdH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="RgL-93-AV7"/>
@@ -44,11 +61,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hRR-wF-15t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="0MC-cz-1wj"/>
+                            <constraint firstItem="hRR-wF-15t" firstAttribute="width" secondItem="hRR-wF-15t" secondAttribute="height" multiplier="1:1" id="8Es-1b-Zbb"/>
                             <constraint firstItem="8dL-nP-I40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSN-7R-epK"/>
                             <constraint firstItem="8dL-nP-I40" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p8M-b4-Opt"/>
+                            <constraint firstItem="hRR-wF-15t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rtJ-eF-yhK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgLoad" destination="hRR-wF-15t" id="Vjy-tm-r3s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +100,13 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="hHK-n4-ois"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-hh-N1V">
+                                <rect key="frame" x="0.0" y="676" width="414" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="580152064.12816799">
+                                    <!--2019-05-21 17:21:04 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -102,7 +132,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-507" y="-70"/>
+            <point key="canvasLocation" x="-507.24637681159425" y="-70.3125"/>
         </scene>
     </scenes>
 </document>
