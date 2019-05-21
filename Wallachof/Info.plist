@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Aceso a la galería para poder mostrar el producto que quiere vender</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Usar la galería para añadir fotos de los productos</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
