@@ -100,20 +100,31 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="hHK-n4-ois"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-hh-N1V">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-hh-N1V">
                                 <rect key="frame" x="0.0" y="676" width="414" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="580152064.12816799">
                                     <!--2019-05-21 17:21:04 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="es"/>
+                                <connections>
+                                    <action selector="pickerDatePublishChange:" destination="SHN-B3-uJU" eventType="valueChanged" id="JKe-B2-H6w"/>
+                                </connections>
                             </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-iz-iao">
+                                <rect key="frame" x="0.0" y="452" width="414" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Vje-sh-Ng1" firstAttribute="bottom" secondItem="NpJ-Ww-0Gq" secondAttribute="bottom" id="02C-QC-Lhh"/>
+                            <constraint firstItem="nvb-iz-iao" firstAttribute="centerX" secondItem="vHv-fq-tNW" secondAttribute="centerX" id="54q-dG-fdr"/>
                             <constraint firstItem="tVu-nu-TRt" firstAttribute="top" secondItem="NpJ-Ww-0Gq" secondAttribute="top" constant="40" id="KiU-V8-LO6"/>
                             <constraint firstItem="NpJ-Ww-0Gq" firstAttribute="trailing" secondItem="Vje-sh-Ng1" secondAttribute="trailing" constant="65" id="Wjh-CI-r1Y"/>
+                            <constraint firstItem="nvb-iz-iao" firstAttribute="trailing" secondItem="NpJ-Ww-0Gq" secondAttribute="trailing" id="b0e-Lv-khV"/>
+                            <constraint firstItem="nvb-iz-iao" firstAttribute="top" secondItem="NpJ-Ww-0Gq" secondAttribute="top" constant="408" id="iYg-mj-d9m"/>
+                            <constraint firstItem="nvb-iz-iao" firstAttribute="leading" secondItem="NpJ-Ww-0Gq" secondAttribute="leading" id="vpQ-v0-Q5h"/>
                             <constraint firstItem="tVu-nu-TRt" firstAttribute="centerX" secondItem="vHv-fq-tNW" secondAttribute="centerX" id="zE6-VW-HOy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NpJ-Ww-0Gq"/>
@@ -123,6 +134,8 @@
                     </view>
                     <connections>
                         <outlet property="imgProduct" destination="tVu-nu-TRt" id="LCe-PV-apC"/>
+                        <outlet property="pickerCategory" destination="nvb-iz-iao" id="31m-yO-iB0"/>
+                        <outlet property="pickerPublishDate" destination="Dyq-hh-N1V" id="nxD-jX-Wl2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88g-OR-pQP" userLabel="First Responder" sceneMemberID="firstResponder"/>

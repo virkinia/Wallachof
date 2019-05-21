@@ -15,12 +15,23 @@ class AddProductViewController: UIViewController {
         case camera
     }
 
+
+
     var imagePicker: UIImagePickerController!
+    @IBOutlet weak var pickerPublishDate: UIDatePicker!
+
+
+    @IBOutlet weak var pickerCategory: UIPickerView!
+    let categorias0 = ["electrónica", "moda", "automoción", "hogar"]
+    let categorias1 = ["zapatos", "bolsos", "accesorios"]
 
 
     @IBOutlet weak var imgProduct: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        pickerCategory.delegate = self
+        pickerCategory.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -74,6 +85,10 @@ class AddProductViewController: UIViewController {
     }
 
 
+    @IBAction func pickerDatePublishChange(_ sender: UIDatePicker) {
+        debugPrint("Ha cambiado \(sender.date)")
+    }
+
 
 }
 extension AddProductViewController:UINavigationControllerDelegate {}
@@ -109,6 +124,65 @@ extension AddProductViewController: UIImagePickerControllerDelegate {
 
         CoreDataManager.shared.saveContext()
 
+
+    }
+
+}
+
+extension AddProductViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2 // Dos columnas Categorias - Cambiar
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+        if (component == 0){
+           return categorias0.count
+        } else if component == 1 {
+           return categorias1.count
+        }
+        return 0
+    }
+
+
+}
+
+extension AddProductViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+
+
+        switch component {
+        case 0:
+            return categorias0[row]
+        case 1:
+              return categorias1[row]
+
+        default:
+            debugPrint("Error no debería llegar")
+        }
+        return nil
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        let fila0 = pickerView.selectedRow(inComponent: 0)
+        let fila1 = pickerView.selectedRow(inComponent: 1)
+
+        debugPrint("Todos \(categorias0[fila0]) y \(categorias1[fila1])")
+
+        var rowText = ""
+
+        switch component {
+        case 0:
+            rowText = categorias0[row]
+        case 1:
+            rowText = categorias1[row]
+
+        default:
+            debugPrint("Error no debería llegar")
+        }
+
+        debugPrint("Se ha seleccionado \(rowText)")
 
     }
 
