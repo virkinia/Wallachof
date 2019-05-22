@@ -85,15 +85,15 @@
             </objects>
             <point key="canvasLocation" x="287" y="-70"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="zX2-CX-Nhm">
             <objects>
-                <viewController id="r86-NC-cdy" sceneMemberID="viewController">
+                <viewController id="r86-NC-cdy" customClass="MapViewController" customModule="Wallachof" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idB-cP-LIe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-Qf-6Sp">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-Qf-6Sp">
                                 <rect key="frame" x="20" y="44" width="374" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="Bsn-uX-Yls"/>
@@ -108,6 +108,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1vi-vb-eBg"/>
                     </view>
+                    <connections>
+                        <outlet property="mapProduct" destination="9KC-Qf-6Sp" id="SyY-l4-mCL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2y-Yw-lg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

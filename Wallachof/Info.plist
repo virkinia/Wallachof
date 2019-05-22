@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Aceso a la galería para poder mostrar el producto que quiere vender</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Te ayuda a saber los productos más cercanos</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Usar la galería para añadir fotos de los productos</string>
 	<key>UILaunchStoryboardName</key>
