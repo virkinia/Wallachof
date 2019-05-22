@@ -73,7 +73,7 @@ extension MapViewController: MKMapViewDelegate {
 
         let identifier = "podId"
         var view: MKMarkerAnnotationView
-        // Dame una para reusar
+        // Dame una notacion para reusar
         if let dequeuedView =  mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
