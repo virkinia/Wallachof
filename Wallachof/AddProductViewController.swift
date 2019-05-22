@@ -15,25 +15,61 @@ class AddProductViewController: UIViewController {
         case camera
     }
 
-
-
     var imagePicker: UIImagePickerController!
+
     @IBOutlet weak var pickerPublishDate: UIDatePicker!
-
-
     @IBOutlet weak var pickerCategory: UIPickerView!
+
+    @IBOutlet weak var scrollFormView: UIScrollView!
+
+    @IBOutlet weak var descTextField: UITextField!
+    
     let categorias0 = ["electrónica", "moda", "automoción", "hogar"]
     let categorias1 = ["zapatos", "bolsos", "accesorios"]
 
 
     @IBOutlet weak var imgProduct: UIImageView!
     override func viewDidLoad() {
+
+
         super.viewDidLoad()
+
+        descTextField.delegate = self
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
 
         pickerCategory.delegate = self
         pickerCategory.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        debugPrint("El teclado se abre")
+        adjustScrollForKeyboardShow(true, notification: notification)
+
+    }
+    @objc func keyboardWillHide(notification: Notification) {
+        debugPrint("El teclado se cierra")
+         adjustScrollForKeyboardShow(false, notification: notification)
+    }
+
+    func adjustScrollForKeyboardShow(_ show: Bool, notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let frameValue  = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+            else {
+            return
+        }
+
+        // Cuadrado donde se inicia y tamaño CGRect -> NSValue(Objective)
+        let keyBoardFrame = frameValue.cgRectValue
+        let resizeInset = show ? keyBoardFrame.height : -keyBoardFrame.height
+
+        scrollFormView.contentInset.bottom = resizeInset
+        scrollFormView.scrollIndicatorInsets.bottom = resizeInset
     }
     
     @IBAction func tapDetected(_ sender: UITapGestureRecognizer) {
@@ -90,6 +126,8 @@ class AddProductViewController: UIViewController {
     }
 
 
+
+
 }
 extension AddProductViewController:UINavigationControllerDelegate {}
 extension AddProductViewController: UIImagePickerControllerDelegate {
@@ -124,7 +162,6 @@ extension AddProductViewController: UIImagePickerControllerDelegate {
 
         CoreDataManager.shared.saveContext()
 
-
     }
 
 }
@@ -149,7 +186,6 @@ extension AddProductViewController: UIPickerViewDataSource {
 
 extension AddProductViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-
 
         switch component {
         case 0:
@@ -186,4 +222,14 @@ extension AddProductViewController: UIPickerViewDelegate {
 
     }
 
+}
+extension AddProductViewController: UITextFieldDelegate {
+
+    // Cuando el usuario pulsa intro - salta este delegado
+    // y fuerzo el cerrar el teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        // textField.endEditing(force: true)
+        return true
+    }
 }
