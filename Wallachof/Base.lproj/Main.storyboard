@@ -99,11 +99,34 @@
                                     <constraint firstAttribute="height" constant="400" id="Bsn-uX-Yls"/>
                                 </constraints>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu6-ex-0Go" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="134" y="523" width="146" height="51"/>
+                                <color key="tintColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Botón con carga"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="depth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadButtonAction:" destination="r86-NC-cdy" eventType="touchUpInside" id="zYf-7j-bwp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Tu6-ex-0Go" firstAttribute="top" secondItem="9KC-Qf-6Sp" secondAttribute="bottom" constant="79" id="0Js-IQ-EmU"/>
                             <constraint firstItem="1vi-vb-eBg" firstAttribute="trailing" secondItem="9KC-Qf-6Sp" secondAttribute="trailing" constant="20" id="DH6-7H-qgo"/>
+                            <constraint firstItem="Tu6-ex-0Go" firstAttribute="centerX" secondItem="9KC-Qf-6Sp" secondAttribute="centerX" id="Ikq-Uh-CZL"/>
+                            <constraint firstItem="Tu6-ex-0Go" firstAttribute="leading" secondItem="1vi-vb-eBg" secondAttribute="leading" constant="134" id="MTy-jj-DG3"/>
                             <constraint firstItem="9KC-Qf-6Sp" firstAttribute="leading" secondItem="1vi-vb-eBg" secondAttribute="leading" constant="20" id="mUX-MH-9iL"/>
+                            <constraint firstItem="1vi-vb-eBg" firstAttribute="bottom" secondItem="Tu6-ex-0Go" secondAttribute="bottom" constant="288" id="pm5-WI-a0h"/>
                             <constraint firstItem="9KC-Qf-6Sp" firstAttribute="top" secondItem="1vi-vb-eBg" secondAttribute="top" id="ptK-ee-4E9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1vi-vb-eBg"/>

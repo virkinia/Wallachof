@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SwiftyButton
 
 class MapViewController: UIViewController {
 
@@ -28,6 +29,16 @@ class MapViewController: UIViewController {
 
     }
 
+    
+    @IBAction func loadButtonAction(_ sender: PressableButton) {
+
+        sender.colors = PressableButton.ColorSet(
+            button: UIColor(red: 20 / 255, green: 450 / 255, blue: 219 / 255, alpha: 1),
+            shadow: UIColor(red: 41 / 255, green: 128 / 255, blue: 185 / 255, alpha: 1)
+        )
+
+    }
+    
     func preguntarSiTienePermiso() {
         if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
             locationManager.requestWhenInUseAuthorization()
