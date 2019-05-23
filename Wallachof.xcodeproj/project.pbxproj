@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		D9021C7B2292F8AA00E772F0 /* Wallachof.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9021C792292F8AA00E772F0 /* Wallachof.xcdatamodeld */; };
 		D9021C7D2292F8AB00E772F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7C2292F8AB00E772F0 /* Assets.xcassets */; };
 		D9021C802292F8AB00E772F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9021C7E2292F8AB00E772F0 /* LaunchScreen.storyboard */; };
+		D93830462296F3C1004D9464 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93830452296F3C1004D9464 /* Auth.storyboard */; };
+		D93830482296FAB6004D9464 /* UIVIew+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93830472296FAB6004D9464 /* UIVIew+Styles.swift */; };
+		D938304B2296FD96004D9464 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938304A2296FD96004D9464 /* AuthViewController.swift */; };
 		D93CBCD22294426900C9D3D0 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CBCD12294426900C9D3D0 /* AddProductViewController.swift */; };
 		D93CBCD422945DEB00C9D3D0 /* UImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93CBCD322945DEB00C9D3D0 /* UImage+Resize.swift */; };
 		D950E5DE2295A08800657A2D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950E5DD2295A08800657A2D /* MapViewController.swift */; };
@@ -36,8 +39,13 @@
 		D9021C7C2292F8AB00E772F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9021C7F2292F8AB00E772F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9021C812292F8AB00E772F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93830432296F3A2004D9464 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = /Users/Dev2/Documents/Wallachof/Wallachof/coreData/Auth.storyboard; sourceTree = "<absolute>"; };
+		D93830442296F3A7004D9464 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = /Users/Dev2/Documents/Wallachof/Wallachof/coreData/Auth.storyboard; sourceTree = "<absolute>"; };
+		D93830452296F3C1004D9464 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		D93830472296FAB6004D9464 /* UIVIew+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Styles.swift"; sourceTree = "<group>"; };
+		D938304A2296FD96004D9464 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		D93CBCD12294426900C9D3D0 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
-		D93CBCD322945DEB00C9D3D0 /* UImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UImage+Resize.swift"; path = "Helpers/UImage+Resize.swift"; sourceTree = "<group>"; };
+		D93CBCD322945DEB00C9D3D0 /* UImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImage+Resize.swift"; sourceTree = "<group>"; };
 		D950E5DD2295A08800657A2D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D950E5E02295A15E00657A2D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D950E5E22295AC2400657A2D /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
@@ -65,7 +73,6 @@
 				1CC260EB7378D2DA11E5EA6C /* Pods-Wallachof.debug.xcconfig */,
 				C29925666081FDF674F05CB4 /* Pods-Wallachof.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,8 @@
 		D9021C712292F8AA00E772F0 /* Wallachof */ = {
 			isa = PBXGroup;
 			children = (
+				D938304C22970131004D9464 /* Help */,
+				D93830492296FD6F004D9464 /* Auth */,
 				D9021C8B2293023800E772F0 /* coreData */,
 				D9021C722292F8AA00E772F0 /* AppDelegate.swift */,
 				D9021C742292F8AA00E772F0 /* ViewController.swift */,
@@ -102,7 +111,7 @@
 				D9021C7E2292F8AB00E772F0 /* LaunchScreen.storyboard */,
 				D9021C812292F8AB00E772F0 /* Info.plist */,
 				D9021C792292F8AA00E772F0 /* Wallachof.xcdatamodeld */,
-				D93CBCD322945DEB00C9D3D0 /* UImage+Resize.swift */,
+				D93830452296F3C1004D9464 /* Auth.storyboard */,
 			);
 			path = Wallachof;
 			sourceTree = "<group>";
@@ -110,10 +119,29 @@
 		D9021C8B2293023800E772F0 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
+				D93830432296F3A2004D9464 /* Auth.storyboard */,
+				D93830442296F3A7004D9464 /* Auth.storyboard */,
 				D9ECF55D229306F1002397EB /* Product+CoreDataClass.swift */,
 				D9ECF55E229306F1002397EB /* Product+CoreDataProperties.swift */,
 			);
 			path = coreData;
+			sourceTree = "<group>";
+		};
+		D93830492296FD6F004D9464 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D938304A2296FD96004D9464 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D938304C22970131004D9464 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				D93CBCD322945DEB00C9D3D0 /* UImage+Resize.swift */,
+				D93830472296FAB6004D9464 /* UIVIew+Styles.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		D950E5DF2295A15E00657A2D /* Frameworks */ = {
@@ -190,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D93830462296F3C1004D9464 /* Auth.storyboard in Resources */,
 				D9021C802292F8AB00E772F0 /* LaunchScreen.storyboard in Resources */,
 				D9021C7D2292F8AB00E772F0 /* Assets.xcassets in Resources */,
 				D9021C782292F8AA00E772F0 /* Main.storyboard in Resources */,
@@ -248,6 +277,8 @@
 				D9ECF560229306F1002397EB /* Product+CoreDataProperties.swift in Sources */,
 				D93CBCD22294426900C9D3D0 /* AddProductViewController.swift in Sources */,
 				D9021C752292F8AA00E772F0 /* ViewController.swift in Sources */,
+				D93830482296FAB6004D9464 /* UIVIew+Styles.swift in Sources */,
+				D938304B2296FD96004D9464 /* AuthViewController.swift in Sources */,
 				D93CBCD422945DEB00C9D3D0 /* UImage+Resize.swift in Sources */,
 				D950E5DE2295A08800657A2D /* MapViewController.swift in Sources */,
 				D9ECF587229329C9002397EB /* CoreManagerData.swift in Sources */,

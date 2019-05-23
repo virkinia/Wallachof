@@ -17,7 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        
+
+        if (userIsLogged()) {
+            loadMainInitialViewController()
+        }
+
+
         return true
+    }
+
+    func userIsLogged() -> Bool {
+        return UserDefaults.standard.bool(forKey: "userLogged")
+    }
+
+    func loadMainInitialViewController() {
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = storyboard.instantiateInitialViewController()
+        self.window?.rootViewController = mainViewController
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
